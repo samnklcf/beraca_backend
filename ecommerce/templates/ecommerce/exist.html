@@ -1,0 +1,28 @@
+{% extends 'ecommerce/base.html' %}
+{% block content %}
+<br>
+<br>
+<center style="width: 100% !important; display:flex; align-items:center; justify-content:center;">
+    <div class="sam" style="text-align: center; width: 500px; color: white !important; background: #56CB72; padding: 20px; border-radius: 4px;">
+
+        <h2 style='text-align: center; color: white !important; font: 900 !important;'>Il y a une erreur dans le formulaire que vous avez rempli.<br>
+        
+        </h2>
+        <ol>
+            <li># Il y a un champs que vous avez laisser vide</li>
+            <li># La donnée que vous avez entrer existe déjà </li>
+            <li></li>
+        </ol>
+        <h2 style='text-align: center; color: white !important; font: 900 !important;'>Vous pouvez nous contacter au <br> {% for nums in num %}<a href="tel:{{nums.num}}">{{nums.num}}{% endfor %}</h2>
+
+        <br/>
+        
+        <p><a href="{% url 'demande' %}"  class="btn btn-info">Retour</a></p>
+
+    </div>
+</center>
+<br>
+<br>
+
+
+{% endblock content %}

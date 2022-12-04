@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Beraca</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'ecommerce/css/bootstrap.min.css'%}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'ecommerce/css/style.css'%}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'ecommerce/css/responsive.css'%}">
+    
+    <link rel="stylesheet" href="{% static 'ecommerce/css/custom.css'%}">
+
+   
+</head>
+<body>
+
+    {% include 'ecommerce/header.html' %}
+
+    {% block content %}{% endblock content %}
+    
+    {% include 'ecommerce/footer.html' %}
+    <div class="footer-copyright">
+        <p class="footer-company">Tous drois reservés. &copy; 2022 <a href="#">BERACA</a> Développé par :
+            <a href="#">Sol'tech</a>
+        </p>
+    </div>
+    <!-- End copyright  -->
+
+    
+    <a href="https://wa.me/+24105077527" class="pose"><img src="{% static 'ecommerce/images/socio/372108180_WHATSAPP_ICON_400.gif' %} " alt=""
+        srcset="">
+</a>
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'ecommerce/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'ecommerce/js/popper.min.js' %}"></script>
+    <script src="{% static 'ecommerce/js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'ecommerce/js/jquery.superslides.min.js' %}"></script>
+    <script src="{% static 'ecommerce/js/bootstrap-select.js' %}"></script>
+    <script src="{% static 'ecommerce/js/inewsticker.js' %}"></script>
+    <script src="{% static 'ecommerce/js/bootsnav.js.' %}"></script>
+    <script src="{% static 'ecommerce/js/images-loded.min.js' %}"></script>
+    <script src="{% static 'ecommerce/js/isotope.min.js' %}"></script>
+    <script src="{% static 'ecommerce/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'ecommerce/js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'ecommerce/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'ecommerce/js/contact-form-script.js' %}"></script>
+    <script src="{% static 'ecommerce/js/custom.js' %}"></script>
+</body>
+
+</html>

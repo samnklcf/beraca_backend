@@ -1,0 +1,70 @@
+<footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Jour de travail</h3>
+                        <ul class="list-time">
+                            <li>Lundi - Vendredi: 08h-18h</li>
+                            <li>Samedi: 08h-12h</li>
+                            <li>Sunday: <span>Fermé</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Réseaux sociaux</h3>
+                        <p>Suivez nous sur vos réseaux favoris</p>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-widget">
+                        <h4>A propos</h4>
+                        <p>BERACA Industrie est une ferme qui vous propose des produits bio cultivés au
+                            Gabon</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="{% url 'apropos' %}">A propos de nous</a></li>
+                            <li><a href="{% url 'demande' %}">Nous vous offrons du travail</a></li>
+                            <li><a href="#">Termes &amp; Conditions</a></li>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h4>Contactez Nous</h4>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Nzeng Ayong <br> Montalier<br> </p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>Téléphone: {% for nums in num %}<a href="tel:{{nums.num}}">{{nums.num}}{% endfor %}</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>
+                                    Email: {% for email in emails %}<a href="mailto:{{email.email}}">{{email.email}}</a>{% endfor %}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,27 @@
+<div id="slides-shop" class="cover-slides">
+    <ul class="slides-container">
+        {% for news in new %}
+        <li class="text-center">
+            <img src="{{news.image.url}}" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="m-b-20"><strong>{{news.titre}}<br></strong></h1>
+                        <p class="m-b-40">{{news.mini_description}}</p>
+                        <p><a class="btn hvr-hover" href="{% url 'contact' %}">Nous contacter</a></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+        
+       
+    </ul>
+    <div class="slides-navigation" id="visiterpage">
+        <a href="#" class="next ko" style="border-radius: 50%;"><i class="fa fa-angle-right"
+                aria-hidden="true"></i></a>
+        <a href="#" class="prev ko" style="border-radius: 50%;"><i class="fa fa-angle-left"
+                aria-hidden="true"></i></a>
+    </div>
+</div>

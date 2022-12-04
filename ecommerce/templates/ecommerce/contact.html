@@ -1,0 +1,88 @@
+{% extends 'ecommerce/base.html' %}
+{% block content %}
+{% load widget_tweaks %}
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Contactez-nous</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+<!-- Start Cart  -->
+<div class="cart-box-main">
+    <div class="container">
+        
+        <div class="row">
+            
+            
+            <div class="col-sm-12 col-lg-12 mb-3">
+                <div class="checkout-address">
+                    <div class="title-left">
+                        <h3></h3>
+                    </div>
+                    <form class="needs-validation"  method="post">
+                        {% csrf_token %}
+                        
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Nom et prénom</label>
+                                
+                                
+                                {% render_field form.nom class="form-control" id="firstName" %}
+                                
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Email *</label>
+                                
+                                {% render_field form.email class="form-control" id="lastName" %}
+                                
+                               
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Numero de téléphone *</label>
+                            
+                            {% render_field form.telephne class="form-control" id="email" %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="addresssujet">Sujet</label>
+                            
+                            {% render_field form.sujet class="form-control" id="addresssujet"   %}
+                            
+                        </div>
+                        <div class="mb-3">
+
+                            <label for="address2">Message</label>
+                            {{form.media}}
+                            {% render_field form.message class="form-control" id="address2" placeholder=""    %}
+                            
+                        </div>
+                        
+                        
+                        <hr class="mb-4">
+                        
+                        
+
+                    
+                        
+                        <div class="col-12 d-flex shopping-box"> <button type="submit" class="ml-auto btn hvr-hover" style="color: white !important; ">Commander</button> </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock content %}

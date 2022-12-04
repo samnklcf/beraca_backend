@@ -1,0 +1,20 @@
+{% for formation in formations %}
+
+
+<div class="p-5 mb-4 bg-light rounded-3 fond" style="background: url({{formation.image.url}});background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; background-attachment: fixed;">
+        <div class="ju" style="width: 100%;
+    height: 100%;
+    background-color: #000;    
+    z-index: 1000;">
+       </div>
+        <div class="container py-5" style="color: white;">
+            <h1 class="display-5 fw-bold noo-sh-title-top" style="color: white;">{{formation.titre}}</h1>
+            {{formation.contenu | safe }}
+            
+                <a href="https://wa.me/+24105077527" class="btn  btn-lg apl" style="margin-top: 20px; background-color:#56CB72; color: white;">Nous contacter sur whatsapp</a>
+        </div>
+</div>
+
+{% endfor %}
